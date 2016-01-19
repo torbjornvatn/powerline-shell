@@ -8,4 +8,4 @@ def add_gcloud_segment(powerline):
 
     except OSError:
         return
-    powerline.append(output, Color.HOSTNAME_FG, Color.HOSTNAME_BG)
+    powerline.append(output, Color.JOBS_FG, Color.JOBS_BG)

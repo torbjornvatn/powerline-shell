@@ -8,4 +8,4 @@ def add_kube_segment(powerline):
 
     except OSError:
         return
-    powerline.append(output, Color.PATH_FG, Color.PATH_BG)
+    powerline.append(output, Color.JOBS_FG, Color.JOBS_BG)
