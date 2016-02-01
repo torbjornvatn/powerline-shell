@@ -3,7 +3,7 @@ from shlex import split
 
 def add_gcloud_segment(powerline):
     try:
-        cmd = "cat ~/.gcloud/properties | grep project | tr '=' ' ' | tr -s ' ' ' ' | cut -d' ' -f2 | cut -d'-' -f3 | tr -d '\n'"
+        cmd = "gcloud config list| grep project | tr '=' ' ' | tr -s ' ' ' ' | cut -d' ' -f2 | cut -d'-' -f3 | tr -d '\n'"
         output = Popen('%s' % cmd, stdout=PIPE, shell=True).communicate()[0]
 
     except OSError:
